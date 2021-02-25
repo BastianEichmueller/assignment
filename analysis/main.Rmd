@@ -1,0 +1,77 @@
+---
+title: "main"
+author: "BastianEichmueller"
+date: "2021-02-25"
+output: workflowr::wflow_html
+editor_options:
+  chunk_output_type: console
+---
+
+## Introduction
+7. Use the hfi dataset from the `openintro` package
+8. Fit a new model that uses  `pf_expression_control` to predict `hf_score`, or the total human freedom score.
+9. Again add region to the model from Q4. Compare the slope and $R^2$ with the model from Q4.
+
+10. Finally fit a model with `ef_money` and `pf_expression_control` as exposures and `hf_score` as outcome.  Compare the slope and $R^2$ from the models from Q1. Could `ef_money` be a confounder? 
+
+11. Use a linear regression model (and scatter plot) with  `ef_money` as exposure and `pf_expression_control` as outcome, to study whether `ef_money` has an association with `pf_expression_control` as well. This might validate our finding that `ef_money` is a confounder between  `pf_expression_control` as exposure and 
+`hf_score` as outcome from Q6.
+
+7.
+```{r, warning=FALSE, message=FALSE}
+library(openintro)
+library(tidyverse)
+
+hfi_2016 <- hfi %>% 
+  filter(year == 2016)
+```
+
+8.
+```{r}
+m1 <- lm(hf_score ~ pf_expression_control, data = hfi)
+m2 <- lm(hf_score ~ pf_expression_control + region, data = hfi)
+
+slope1 <- m1$coefficients['pf_expression_control']
+slope2 <- m2$coefficients['pf_expression_control']
+
+r1 <- summary(m1)$r.squared
+r2 <- summary(m2)$r.squared
+
+data.frame("slope_pf_expression_control" = c(slope1, slope2), "r_squared" =c(r1, r2), row.names = c("m1", "m2"))
+```
+9.
+The slopes are $m_1 \approx `r round(slope1, 2)`$ and $m_2 \approx `r round(slope2, 2)`$.
+
+The $R^2$ values are $R^2_1 \approx `r round(r1, 2)`$ and $R^2_1 \approx `r round(r2, 2)`$.
+
+10.
+
+```{r}
+m3 <- lm(hf_score ~ ef_money, data = hfi)
+m4 <- lm(hf_score ~ pf_expression_control+ef_money, data = hfi)
+
+slope3 <- m3$coefficients['ef_money']
+slope4 <- m4$coefficients['ef_money']
+
+r3 <- summary(m3)$r.squared
+r4 <- summary(m4)$r.squared
+
+data.frame("slope_ef_money" = c(slope3, slope4), "r_squared" =c(r3, r4), row.names = c("m3", "m4"))
+```
+
+We can see that when adding `pf_expression_control` as an additional exposure to the model `hf_score ~ ef_money`, the slope for ef_money decreases from `r round(slope3, 2)` to `r round(slope4, 2)`, and the $R^2$ value only increases from `r round(r3, 2)` to `r round(r4, 2)`. This suggests that `ef_money` may be a confounder regarding the outcome `hf_score` with the additional exposure of `pf_expression_control` as the slope/effect decreases and the $R^2$ values indicate that the variance explained by the model does not increase as much when combining the variables.
+
+11.
+```{r, warning=FALSE}
+library(ggpubr)
+
+m5 <- lm(pf_expression_control ~ ef_money, data = hfi)
+
+summary(m5)
+
+ggscatter(hfi, x="ef_money", y="pf_expression_control", add="reg.line") +
+  stat_cor(aes(label = paste(..rr.label.., ..p.label.., sep = "~`,`~")))
+```
+
+This validates that `ef_money` is a confounder between `pf_expression_control` as exposure and 
+`hf_score` as outcome.
