@@ -405,7 +405,7 @@ div.tocify {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2021-02-25
+<strong>Last updated:</strong> 2021-02-26
 </p>
 <p>
 <strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
@@ -496,16 +496,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomBastianEichmuellerassignmenttree78ea23ba4ed3601dafea34a87f4e53d7cf8261c0targetblank78ea23ba"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/BastianEichmueller/assignment/tree/78ea23ba4ed3601dafea34a87f4e53d7cf8261c0" target="_blank">78ea23b</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomBastianEichmuellerassignmenttreee30ee98bfaad4943309fdb7223b88ee99c831217targetblanke30ee98a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/BastianEichmueller/assignment/tree/e30ee98bfaad4943309fdb7223b88ee99c831217" target="_blank">e30ee98</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomBastianEichmuellerassignmenttree78ea23ba4ed3601dafea34a87f4e53d7cf8261c0targetblank78ea23ba" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomBastianEichmuellerassignmenttreee30ee98bfaad4943309fdb7223b88ee99c831217targetblanke30ee98a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/BastianEichmueller/assignment/tree/78ea23ba4ed3601dafea34a87f4e53d7cf8261c0" target="_blank">78ea23b</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/BastianEichmueller/assignment/tree/e30ee98bfaad4943309fdb7223b88ee99c831217" target="_blank">e30ee98</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -551,6 +551,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/BastianEichmueller/assignment/blob/e30ee98bfaad4943309fdb7223b88ee99c831217/analysis/main.Rmd" target="_blank">e30ee98</a>
+</td>
+<td>
+BastianEichmueller
+</td>
+<td>
+2021-02-26
+</td>
+<td>
+wflow_publish(files = &quot;analysis/main.Rmd&quot;)
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/BastianEichmueller/assignment/c36f6c66a65c50c3d16d41682229f8a4486cb079/docs/main.html" target="_blank">c36f6c6</a>
+</td>
+<td>
+BastianEichmueller
+</td>
+<td>
+2021-02-25
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -643,14 +677,18 @@ wflow_publish(files = &quot;analysis/main.Rmd&quot;)
 </div>
 </div>
 </div>
-<div id="introduction" class="section level2">
-<h2>Introduction</h2>
+<div id="assignment" class="section level1">
+<h1>Assignment</h1>
 <ol start="7" style="list-style-type: decimal">
 <li>Use the hfi dataset from the <code>openintro</code> package</li>
 <li>Fit a new model that uses <code>pf_expression_control</code> to predict <code>hf_score</code>, or the total human freedom score.</li>
 <li><p>Again add region to the model from Q4. Compare the slope and <span class="math inline">\(R^2\)</span> with the model from Q4.</p></li>
 <li><p>Finally fit a model with <code>ef_money</code> and <code>pf_expression_control</code> as exposures and <code>hf_score</code> as outcome. Compare the slope and <span class="math inline">\(R^2\)</span> from the models from Q1. Could <code>ef_money</code> be a confounder?</p></li>
 <li><p>Use a linear regression model (and scatter plot) with <code>ef_money</code> as exposure and <code>pf_expression_control</code> as outcome, to study whether <code>ef_money</code> has an association with <code>pf_expression_control</code> as well. This might validate our finding that <code>ef_money</code> is a confounder between <code>pf_expression_control</code> as exposure and <code>hf_score</code> as outcome from Q6.</p></li>
+</ol>
+<div id="solutions" class="section level2">
+<h2>Solutions</h2>
+<ol start="7" style="list-style-type: decimal">
 <li></li>
 </ol>
 <pre class="r"><code>library(openintro)
@@ -694,7 +732,7 @@ data.frame(&quot;slope_ef_money&quot; = c(slope3, slope4), &quot;r_squared&quot;
 <pre><code>   slope_ef_money r_squared
 m3      0.5327067 0.5130908
 m4      0.3520102 0.7555412</code></pre>
-<p>We can see that when adding <code>pf_expression_control</code> as an additional exposure to the model <code>hf_score ~ ef_money</code>, the slope for ef_money decreases from 0.53 to 0.35, and the <span class="math inline">\(R^2\)</span> value only increases from 0.51 to 0.76. This suggests that <code>ef_money</code> may be a confounder regarding the outcome <code>hf_score</code> with the additional exposure of <code>pf_expression_control</code> as the slope/effect decreases and the <span class="math inline">\(R^2\)</span> values indicate that the variance explained by the model does not increase as much when combining the variables.</p>
+<p>We can see that when adding <code>pf_expression_control</code> as an additional exposure to the model <code>hf_score ~ ef_money</code>, the slope for <code>ef_money</code> decreases from 0.53 to 0.35, and the <span class="math inline">\(R^2\)</span> value only increases from 0.51 to 0.76. This suggests that <code>ef_money</code> may be a confounder regarding the outcome <code>hf_score</code> with the additional exposure of <code>pf_expression_control</code> as the slope decreases and the <span class="math inline">\(R^2\)</span> values indicate that the variance explained by the model does not increase as much as expected when combining the variables.</p>
 <ol start="11" style="list-style-type: decimal">
 <li></li>
 </ol>
@@ -776,6 +814,7 @@ loaded via a namespace (and not attached):
 [65] R6_2.4.1          lubridate_1.7.9   knitr_1.29        rprojroot_1.3-2  
 [69] stringi_1.4.6     Rcpp_1.0.5        vctrs_0.3.2       dbplyr_1.4.4     
 [73] tidyselect_1.1.0  xfun_0.15        </code></pre>
+</div>
 </div>
 </div>
 
