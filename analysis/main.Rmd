@@ -7,7 +7,7 @@ editor_options:
   chunk_output_type: console
 ---
 
-## Introduction
+# Assignment
 7. Use the hfi dataset from the `openintro` package
 8. Fit a new model that uses  `pf_expression_control` to predict `hf_score`, or the total human freedom score.
 9. Again add region to the model from Q4. Compare the slope and $R^2$ with the model from Q4.
@@ -17,6 +17,7 @@ editor_options:
 11. Use a linear regression model (and scatter plot) with  `ef_money` as exposure and `pf_expression_control` as outcome, to study whether `ef_money` has an association with `pf_expression_control` as well. This might validate our finding that `ef_money` is a confounder between  `pf_expression_control` as exposure and 
 `hf_score` as outcome from Q6.
 
+## Solutions
 7.
 ```{r, warning=FALSE, message=FALSE}
 library(openintro)
@@ -59,7 +60,7 @@ r4 <- summary(m4)$r.squared
 data.frame("slope_ef_money" = c(slope3, slope4), "r_squared" =c(r3, r4), row.names = c("m3", "m4"))
 ```
 
-We can see that when adding `pf_expression_control` as an additional exposure to the model `hf_score ~ ef_money`, the slope for ef_money decreases from `r round(slope3, 2)` to `r round(slope4, 2)`, and the $R^2$ value only increases from `r round(r3, 2)` to `r round(r4, 2)`. This suggests that `ef_money` may be a confounder regarding the outcome `hf_score` with the additional exposure of `pf_expression_control` as the slope/effect decreases and the $R^2$ values indicate that the variance explained by the model does not increase as much when combining the variables.
+We can see that when adding `pf_expression_control` as an additional exposure to the model `hf_score ~ ef_money`, the slope for `ef_money` decreases from `r round(slope3, 2)` to `r round(slope4, 2)`, and the $R^2$ value only increases from `r round(r3, 2)` to `r round(r4, 2)`. This suggests that `ef_money` may be a confounder regarding the outcome `hf_score` with the additional exposure of `pf_expression_control` as the slope decreases and the $R^2$ values indicate that the variance explained by the model does not increase as much as expected when combining the variables.
 
 11.
 ```{r, warning=FALSE}
