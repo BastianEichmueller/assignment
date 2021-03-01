@@ -38,13 +38,13 @@ slope2 <- m2$coefficients["pf_expression_control"]
 r1 <- summary(m1)$r.squared
 r2 <- summary(m2)$r.squared
 
-knitr::kable(
+#knitr::kable(
   data.frame(
     "slope_pf_expression_control" = c(slope1, slope2),
     "r_squared" = c(r1, r2),
     row.names = c("m1", "m2")
   )
-)
+#)
 ```
 9.
 
