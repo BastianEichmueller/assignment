@@ -90,6 +90,8 @@ ggscatter(hfi, x = "ef_money", y = "pf_expression_control", add = "reg.line") +
 This validates that `ef_money` is a confounder between `pf_expression_control` as exposure and 
 `hf_score` as outcome.
 
+Thank you for the Seminar!
+
 ```{r, echo = FALSE, out.width = "70%", eval=TRUE}
 knitr::include_graphics("https://github.com/allisonhorst/stats-illustrations/blob/master/rstats-artwork/code_hero.jpg?raw=true", dpi = 100)
 ```
