@@ -405,7 +405,7 @@ div.tocify {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2021-02-28
+<strong>Last updated:</strong> 2021-03-01
 </p>
 <p>
 <strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
@@ -496,16 +496,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomBastianEichmuellerassignmenttree1ddef8e052715058de1b7cf9cbc818471bf1095ftargetblank1ddef8ea"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/BastianEichmueller/assignment/tree/1ddef8e052715058de1b7cf9cbc818471bf1095f" target="_blank">1ddef8e</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomBastianEichmuellerassignmenttreedf4b5904f850ec80904e4bb7eecbe9798ba52f50targetblankdf4b590a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/BastianEichmueller/assignment/tree/df4b5904f850ec80904e4bb7eecbe9798ba52f50" target="_blank">df4b590</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomBastianEichmuellerassignmenttree1ddef8e052715058de1b7cf9cbc818471bf1095ftargetblank1ddef8ea" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomBastianEichmuellerassignmenttreedf4b5904f850ec80904e4bb7eecbe9798ba52f50targetblankdf4b590a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/BastianEichmueller/assignment/tree/1ddef8e052715058de1b7cf9cbc818471bf1095f" target="_blank">1ddef8e</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/BastianEichmueller/assignment/tree/df4b5904f850ec80904e4bb7eecbe9798ba52f50" target="_blank">df4b590</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -551,6 +551,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/BastianEichmueller/assignment/blob/df4b5904f850ec80904e4bb7eecbe9798ba52f50/analysis/main.Rmd" target="_blank">df4b590</a>
+</td>
+<td>
+BastianEichmueller
+</td>
+<td>
+2021-03-01
+</td>
+<td>
+wflow_publish(files = &quot;analysis/main.Rmd&quot;)
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/BastianEichmueller/assignment/f4096ef3bb989319ce5b1feb464df3568c057da1/docs/main.html" target="_blank">f4096ef</a>
+</td>
+<td>
+BastianEichmueller
+</td>
+<td>
+2021-02-28
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 html
@@ -694,8 +728,8 @@ wflow_publish(files = &quot;analysis/main.Rmd&quot;)
 </div>
 </div>
 </div>
-<div id="assignment" class="section level1">
-<h1>Assignment</h1>
+<div id="assignment" class="section level2">
+<h2>Assignment</h2>
 <ol start="7" style="list-style-type: decimal">
 <li>Use the hfi dataset from the <code>openintro</code> package</li>
 <li>Fit a new model that uses <code>pf_expression_control</code> to predict <code>hf_score</code>, or the total human freedom score.</li>
@@ -703,6 +737,7 @@ wflow_publish(files = &quot;analysis/main.Rmd&quot;)
 <li><p>Finally fit a model with <code>ef_money</code> and <code>pf_expression_control</code> as exposures and <code>hf_score</code> as outcome. Compare the slope and <span class="math inline">\(R^2\)</span> from the models from Q1. Could <code>ef_money</code> be a confounder?</p></li>
 <li><p>Use a linear regression model (and scatter plot) with <code>ef_money</code> as exposure and <code>pf_expression_control</code> as outcome, to study whether <code>ef_money</code> has an association with <code>pf_expression_control</code> as well. This might validate our finding that <code>ef_money</code> is a confounder between <code>pf_expression_control</code> as exposure and <code>hf_score</code> as outcome from Q6.</p></li>
 </ol>
+</div>
 <div id="solutions" class="section level2">
 <h2>Solutions</h2>
 <ol start="7" style="list-style-type: decimal">
@@ -782,6 +817,7 @@ F-statistic: 334.6 on 1 and 1374 DF,  p-value: &lt; 2.2e-16</code></pre>
 <pre><code>`geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
 <p><img src="figure/main.Rmd/unnamed-chunk-4-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>This validates that <code>ef_money</code> is a confounder between <code>pf_expression_control</code> as exposure and <code>hf_score</code> as outcome.</p>
+<p><img src="https://github.com/allisonhorst/stats-illustrations/blob/master/rstats-artwork/code_hero.jpg?raw=true" width="70%" style="display: block; margin: auto;" /></p>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -831,7 +867,6 @@ loaded via a namespace (and not attached):
 [65] R6_2.4.1          lubridate_1.7.9   knitr_1.29        rprojroot_1.3-2  
 [69] stringi_1.4.6     Rcpp_1.0.5        vctrs_0.3.2       dbplyr_1.4.4     
 [73] tidyselect_1.1.0  xfun_0.15        </code></pre>
-</div>
 </div>
 </div>
 
