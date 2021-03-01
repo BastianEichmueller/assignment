@@ -496,16 +496,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomBastianEichmuellerassignmenttreedf4b5904f850ec80904e4bb7eecbe9798ba52f50targetblankdf4b590a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/BastianEichmueller/assignment/tree/df4b5904f850ec80904e4bb7eecbe9798ba52f50" target="_blank">df4b590</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomBastianEichmuellerassignmenttree654789bb4c0374a301351e9fa98ed55b0bae48c7targetblank654789ba"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/BastianEichmueller/assignment/tree/654789bb4c0374a301351e9fa98ed55b0bae48c7" target="_blank">654789b</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomBastianEichmuellerassignmenttreedf4b5904f850ec80904e4bb7eecbe9798ba52f50targetblankdf4b590a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomBastianEichmuellerassignmenttree654789bb4c0374a301351e9fa98ed55b0bae48c7targetblank654789ba" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/BastianEichmueller/assignment/tree/df4b5904f850ec80904e4bb7eecbe9798ba52f50" target="_blank">df4b590</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/BastianEichmueller/assignment/tree/654789bb4c0374a301351e9fa98ed55b0bae48c7" target="_blank">654789b</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -551,6 +551,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/BastianEichmueller/assignment/blob/654789bb4c0374a301351e9fa98ed55b0bae48c7/analysis/main.Rmd" target="_blank">654789b</a>
+</td>
+<td>
+BastianEichmueller
+</td>
+<td>
+2021-03-01
+</td>
+<td>
+wflow_publish(files = &quot;analysis/main.Rmd&quot;)
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/BastianEichmueller/assignment/76beb4117508d09b75f8341cd51eddd03cde9e0d/docs/main.html" target="_blank">76beb41</a>
+</td>
+<td>
+BastianEichmueller
+</td>
+<td>
+2021-03-01
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -746,7 +780,7 @@ wflow_publish(files = &quot;analysis/main.Rmd&quot;)
 <pre class="r"><code>library(openintro)
 library(tidyverse)
 
-hfi_2016 &lt;- hfi %&gt;% 
+hfi_2016 &lt;- hfi %&gt;%
   filter(year == 2016)</code></pre>
 <ol start="8" style="list-style-type: decimal">
 <li></li>
@@ -754,16 +788,40 @@ hfi_2016 &lt;- hfi %&gt;%
 <pre class="r"><code>m1 &lt;- lm(hf_score ~ pf_expression_control, data = hfi)
 m2 &lt;- lm(hf_score ~ pf_expression_control + region, data = hfi)
 
-slope1 &lt;- m1$coefficients[&#39;pf_expression_control&#39;]
-slope2 &lt;- m2$coefficients[&#39;pf_expression_control&#39;]
+slope1 &lt;- m1$coefficients[&quot;pf_expression_control&quot;]
+slope2 &lt;- m2$coefficients[&quot;pf_expression_control&quot;]
 
 r1 &lt;- summary(m1)$r.squared
 r2 &lt;- summary(m2)$r.squared
 
-data.frame(&quot;slope_pf_expression_control&quot; = c(slope1, slope2), &quot;r_squared&quot; =c(r1, r2), row.names = c(&quot;m1&quot;, &quot;m2&quot;))</code></pre>
-<pre><code>   slope_pf_expression_control r_squared
-m1                   0.3498617 0.5775046
-m2                   0.2423651 0.7375400</code></pre>
+knitr::kable(
+  data.frame(
+    &quot;slope_pf_expression_control&quot; = c(slope1, slope2),
+    &quot;r_squared&quot; = c(r1, r2),
+    row.names = c(&quot;m1&quot;, &quot;m2&quot;)
+  )
+)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">slope_pf_expression_control</th>
+<th align="right">r_squared</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">m1</td>
+<td align="right">0.3498617</td>
+<td align="right">0.5775046</td>
+</tr>
+<tr class="even">
+<td align="left">m2</td>
+<td align="right">0.2423651</td>
+<td align="right">0.7375400</td>
+</tr>
+</tbody>
+</table>
 <ol start="9" style="list-style-type: decimal">
 <li>The slopes are <span class="math inline">\(m_1 \approx 0.35\)</span> and <span class="math inline">\(m_2 \approx 0.24\)</span>.</li>
 </ol>
@@ -772,18 +830,42 @@ m2                   0.2423651 0.7375400</code></pre>
 <li></li>
 </ol>
 <pre class="r"><code>m3 &lt;- lm(hf_score ~ ef_money, data = hfi)
-m4 &lt;- lm(hf_score ~ pf_expression_control+ef_money, data = hfi)
+m4 &lt;- lm(hf_score ~ pf_expression_control + ef_money, data = hfi)
 
-slope3 &lt;- m3$coefficients[&#39;ef_money&#39;]
-slope4 &lt;- m4$coefficients[&#39;ef_money&#39;]
+slope3 &lt;- m3$coefficients[&quot;ef_money&quot;]
+slope4 &lt;- m4$coefficients[&quot;ef_money&quot;]
 
 r3 &lt;- summary(m3)$r.squared
 r4 &lt;- summary(m4)$r.squared
 
-data.frame(&quot;slope_ef_money&quot; = c(slope3, slope4), &quot;r_squared&quot; =c(r3, r4), row.names = c(&quot;m3&quot;, &quot;m4&quot;))</code></pre>
-<pre><code>   slope_ef_money r_squared
-m3      0.5327067 0.5130908
-m4      0.3520102 0.7555412</code></pre>
+knitr::kable(
+  data.frame(
+    &quot;slope_ef_money&quot; = c(slope3, slope4),
+    &quot;r_squared&quot; = c(r3, r4),
+    row.names = c(&quot;m3&quot;, &quot;m4&quot;)
+  )
+)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">slope_ef_money</th>
+<th align="right">r_squared</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">m3</td>
+<td align="right">0.5327067</td>
+<td align="right">0.5130908</td>
+</tr>
+<tr class="even">
+<td align="left">m4</td>
+<td align="right">0.3520102</td>
+<td align="right">0.7555412</td>
+</tr>
+</tbody>
+</table>
 <p>We can see that when adding <code>pf_expression_control</code> as an additional exposure to the model <code>hf_score ~ ef_money</code>, the slope for <code>ef_money</code> decreases from 0.53 to 0.35, and the <span class="math inline">\(R^2\)</span> value only increases from 0.51 to 0.76. This suggests that <code>ef_money</code> may be a confounder regarding the outcome <code>hf_score</code> with the additional exposure of <code>pf_expression_control</code> as the slope decreases and the <span class="math inline">\(R^2\)</span> values indicate that the variance explained by the model does not increase as much as expected when combining the variables.</p>
 <ol start="11" style="list-style-type: decimal">
 <li></li>
@@ -812,7 +894,7 @@ Residual standard error: 1.995 on 1374 degrees of freedom
   (82 observations deleted due to missingness)
 Multiple R-squared:  0.1958,    Adjusted R-squared:  0.1952 
 F-statistic: 334.6 on 1 and 1374 DF,  p-value: &lt; 2.2e-16</code></pre>
-<pre class="r"><code>ggscatter(hfi, x=&quot;ef_money&quot;, y=&quot;pf_expression_control&quot;, add=&quot;reg.line&quot;) +
+<pre class="r"><code>ggscatter(hfi, x = &quot;ef_money&quot;, y = &quot;pf_expression_control&quot;, add = &quot;reg.line&quot;) +
   stat_cor(aes(label = paste(..rr.label.., ..p.label.., sep = &quot;~`,`~&quot;)))</code></pre>
 <pre><code>`geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
 <p><img src="figure/main.Rmd/unnamed-chunk-4-1.png" width="672" style="display: block; margin: auto;" /></p>
@@ -849,24 +931,24 @@ other attached packages:
 
 loaded via a namespace (and not attached):
  [1] httr_1.4.1        splines_3.6.0     jsonlite_1.7.0    carData_3.0-4    
- [5] modelr_0.1.8      assertthat_0.2.1  blob_1.2.1        cellranger_1.1.0 
- [9] yaml_2.2.1        lattice_0.20-38   pillar_1.4.6      backports_1.1.7  
-[13] glue_1.4.1        digest_0.6.25     promises_1.1.1    ggsignif_0.6.0   
-[17] rvest_0.3.5       colorspace_1.4-1  Matrix_1.2-17     htmltools_0.5.0  
-[21] httpuv_1.5.4      pkgconfig_2.0.3   broom_0.7.0       haven_2.3.1      
-[25] scales_1.1.1      whisker_0.4       openxlsx_4.1.5    later_1.1.0.1    
-[29] rio_0.5.16        git2r_0.28.0      mgcv_1.8-28       farver_2.0.3     
-[33] generics_0.0.2    car_3.0-9         ellipsis_0.3.1    withr_2.2.0      
-[37] cli_2.0.2         magrittr_1.5      crayon_1.3.4      readxl_1.3.1     
-[41] evaluate_0.14     fs_1.4.2          fansi_0.4.1       nlme_3.1-139     
-[45] rstatix_0.6.0     xml2_1.3.2        foreign_0.8-71    tools_3.6.0      
-[49] data.table_1.13.0 hms_0.5.3         lifecycle_0.2.0   munsell_0.5.0    
-[53] reprex_0.3.0      zip_2.0.4         compiler_3.6.0    rlang_0.4.7      
-[57] grid_3.6.0        rstudioapi_0.11   labeling_0.3      rmarkdown_2.3    
-[61] gtable_0.3.0      abind_1.4-5       DBI_1.1.0         curl_4.3         
-[65] R6_2.4.1          lubridate_1.7.9   knitr_1.29        rprojroot_1.3-2  
-[69] stringi_1.4.6     Rcpp_1.0.5        vctrs_0.3.2       dbplyr_1.4.4     
-[73] tidyselect_1.1.0  xfun_0.15        </code></pre>
+ [5] modelr_0.1.8      assertthat_0.2.1  highr_0.8         blob_1.2.1       
+ [9] cellranger_1.1.0  yaml_2.2.1        lattice_0.20-38   pillar_1.4.6     
+[13] backports_1.1.7   glue_1.4.1        digest_0.6.25     promises_1.1.1   
+[17] ggsignif_0.6.0    rvest_0.3.5       colorspace_1.4-1  Matrix_1.2-17    
+[21] htmltools_0.5.0   httpuv_1.5.4      pkgconfig_2.0.3   broom_0.7.0      
+[25] haven_2.3.1       scales_1.1.1      whisker_0.4       openxlsx_4.1.5   
+[29] later_1.1.0.1     rio_0.5.16        git2r_0.28.0      mgcv_1.8-28      
+[33] farver_2.0.3      generics_0.0.2    car_3.0-9         ellipsis_0.3.1   
+[37] withr_2.2.0       cli_2.0.2         magrittr_1.5      crayon_1.3.4     
+[41] readxl_1.3.1      evaluate_0.14     fs_1.4.2          fansi_0.4.1      
+[45] nlme_3.1-139      rstatix_0.6.0     xml2_1.3.2        foreign_0.8-71   
+[49] tools_3.6.0       data.table_1.13.0 hms_0.5.3         lifecycle_0.2.0  
+[53] munsell_0.5.0     reprex_0.3.0      zip_2.0.4         compiler_3.6.0   
+[57] rlang_0.4.7       grid_3.6.0        rstudioapi_0.11   labeling_0.3     
+[61] rmarkdown_2.3     gtable_0.3.0      abind_1.4-5       DBI_1.1.0        
+[65] curl_4.3          R6_2.4.1          lubridate_1.7.9   knitr_1.29       
+[69] rprojroot_1.3-2   stringi_1.4.6     Rcpp_1.0.5        vctrs_0.3.2      
+[73] dbplyr_1.4.4      tidyselect_1.1.0  xfun_0.15        </code></pre>
 </div>
 </div>
 
