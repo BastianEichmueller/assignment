@@ -48,7 +48,7 @@ knitr::kable(
 ```
 9.
 
-The slopes are $$m_1 \approx `r round(slope1, 2)`$$ and $m_2 \approx `r round(slope2, 2)`$.
+The slopes are $m_1 \approx `r round(slope1, 2)`$ and $m_2 \approx `r round(slope2, 2)`$.
 
 The $R^2$ values are $R^2_1 \approx `r round(r1, 2)`$ and $R^2_1 \approx `r round(r2, 2)`$.
 
