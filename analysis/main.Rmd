@@ -38,13 +38,13 @@ slope2 <- m2$coefficients["pf_expression_control"]
 r1 <- summary(m1)$r.squared
 r2 <- summary(m2)$r.squared
 
-#knitr::kable(
+knitr::kable(
   data.frame(
     "slope_pf_expression_control" = c(slope1, slope2),
     "r_squared" = c(r1, r2),
     row.names = c("m1", "m2")
   )
-#)
+)
 ```
 9.
 
@@ -64,13 +64,13 @@ slope4 <- m4$coefficients["ef_money"]
 r3 <- summary(m3)$r.squared
 r4 <- summary(m4)$r.squared
 
-#knitr::kable(
+knitr::kable(
   data.frame(
     "slope_ef_money" = c(slope3, slope4),
     "r_squared" = c(r3, r4),
     row.names = c("m3", "m4")
   )
-#)
+)
 ```
 
 We can see that when adding `pf_expression_control` as an additional exposure to the model `hf_score ~ ef_money`, the slope for `ef_money` decreases from `r round(slope3, 2)` to `r round(slope4, 2)`, and the $R^2$ value only increases from `r round(r3, 2)` to `r round(r4, 2)`. This suggests that `ef_money` may be a confounder regarding the outcome `hf_score` with the additional exposure of `pf_expression_control` as the slope decreases and the $R^2$ values indicate that the variance explained by the model does not increase as much as expected when combining the variables.
@@ -91,5 +91,5 @@ This validates that `ef_money` is a confounder between `pf_expression_control` a
 `hf_score` as outcome.
 
 ```{r, echo = FALSE, out.width = "70%", eval=TRUE}
-#knitr::include_graphics("https://github.com/allisonhorst/stats-illustrations/blob/master/rstats-artwork/code_hero.jpg?raw=true", dpi = 100)
+knitr::include_graphics("https://github.com/allisonhorst/stats-illustrations/blob/master/rstats-artwork/code_hero.jpg?raw=true", dpi = 100)
 ```
