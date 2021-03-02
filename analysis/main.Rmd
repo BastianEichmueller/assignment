@@ -23,7 +23,7 @@ editor_options:
 library(openintro)
 library(tidyverse)
 
-hfi_2016 <- hfi %>%
+hfi <- hfi %>%
   filter(year == 2016)
 ```
 
