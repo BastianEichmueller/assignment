@@ -405,7 +405,7 @@ div.tocify {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2021-03-01
+<strong>Last updated:</strong> 2021-03-02
 </p>
 <p>
 <strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
@@ -496,22 +496,23 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomBastianEichmuellerassignmenttreec249f989e529616ac46e3a60ccb4e17157ea65a1targetblankc249f98a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/BastianEichmueller/assignment/tree/c249f989e529616ac46e3a60ccb4e17157ea65a1" target="_blank">c249f98</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomBastianEichmuellerassignmenttree733571dd404af340fc69db1d18e6db14fe256117targetblank733571da"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/BastianEichmueller/assignment/tree/733571dd404af340fc69db1d18e6db14fe256117" target="_blank">733571d</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomBastianEichmuellerassignmenttreec249f989e529616ac46e3a60ccb4e17157ea65a1targetblankc249f98a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomBastianEichmuellerassignmenttree733571dd404af340fc69db1d18e6db14fe256117targetblank733571da" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/BastianEichmueller/assignment/tree/c249f989e529616ac46e3a60ccb4e17157ea65a1" target="_blank">c249f98</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/BastianEichmueller/assignment/tree/733571dd404af340fc69db1d18e6db14fe256117" target="_blank">733571d</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
 </p>
 <pre><code>
 Ignored files:
+    Ignored:    .Rhistory
     Ignored:    .Rproj.user/
 
 </code></pre>
@@ -551,6 +552,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/BastianEichmueller/assignment/blob/733571dd404af340fc69db1d18e6db14fe256117/analysis/main.Rmd" target="_blank">733571d</a>
+</td>
+<td>
+BastianEichmueller
+</td>
+<td>
+2021-03-02
+</td>
+<td>
+wflow_publish(files = &quot;analysis/main.Rmd&quot;)
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/BastianEichmueller/assignment/d84c07c1dadc39e90bde1f1d00e951801eef15f2/docs/main.html" target="_blank">d84c07c</a>
+</td>
+<td>
+BastianEichmueller
+</td>
+<td>
+2021-03-01
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -1086,7 +1121,7 @@ wflow_publish(files = &quot;analysis/main.Rmd&quot;)
 <pre class="r"><code>library(openintro)
 library(tidyverse)
 
-hfi_2016 &lt;- hfi %&gt;%
+hfi &lt;- hfi %&gt;%
   filter(year == 2016)</code></pre>
 <ol start="8" style="list-style-type: decimal">
 <li></li>
@@ -1118,21 +1153,21 @@ knitr::kable(
 <tbody>
 <tr class="odd">
 <td align="left">m1</td>
-<td align="right">0.3498617</td>
-<td align="right">0.5775046</td>
+<td align="right">0.3684320</td>
+<td align="right">0.6291262</td>
 </tr>
 <tr class="even">
 <td align="left">m2</td>
-<td align="right">0.2423651</td>
-<td align="right">0.7375400</td>
+<td align="right">0.2747109</td>
+<td align="right">0.7544951</td>
 </tr>
 </tbody>
 </table>
 <ol start="9" style="list-style-type: decimal">
 <li></li>
 </ol>
-<p>The slopes are <span class="math inline">\(m_1 \approx 0.35\)</span> and <span class="math inline">\(m_2 \approx 0.24\)</span>.</p>
-<p>The <span class="math inline">\(R^2\)</span> values are <span class="math inline">\(R^2_1 \approx 0.58\)</span> and <span class="math inline">\(R^2_1 \approx 0.74\)</span>.</p>
+<p>The slopes are <span class="math inline">\(m_1 \approx 0.37\)</span> and <span class="math inline">\(m_2 \approx 0.27\)</span>.</p>
+<p>The <span class="math inline">\(R^2\)</span> values are <span class="math inline">\(R^2_1 \approx 0.63\)</span> and <span class="math inline">\(R^2_1 \approx 0.75\)</span>.</p>
 <ol start="10" style="list-style-type: decimal">
 <li></li>
 </ol>
@@ -1163,17 +1198,17 @@ knitr::kable(
 <tbody>
 <tr class="odd">
 <td align="left">m3</td>
-<td align="right">0.5327067</td>
-<td align="right">0.5130908</td>
+<td align="right">0.5038764</td>
+<td align="right">0.4252422</td>
 </tr>
 <tr class="even">
 <td align="left">m4</td>
-<td align="right">0.3520102</td>
-<td align="right">0.7555412</td>
+<td align="right">0.3177051</td>
+<td align="right">0.7740638</td>
 </tr>
 </tbody>
 </table>
-<p>We can see that when adding <code>pf_expression_control</code> as an additional exposure to the model <code>hf_score ~ ef_money</code>, the slope for <code>ef_money</code> decreases from 0.53 to 0.35, and the <span class="math inline">\(R^2\)</span> value only increases from 0.51 to 0.76. This suggests that <code>ef_money</code> may be a confounder regarding the outcome <code>hf_score</code> with the additional exposure of <code>pf_expression_control</code> as the slope decreases and the <span class="math inline">\(R^2\)</span> values indicate that the variance explained by the model does not increase as much as expected when combining the variables.</p>
+<p>We can see that when adding <code>pf_expression_control</code> as an additional exposure to the model <code>hf_score ~ ef_money</code>, the slope for <code>ef_money</code> decreases from 0.5 to 0.32, and the <span class="math inline">\(R^2\)</span> value only increases from 0.43 to 0.77. This suggests that <code>ef_money</code> may be a confounder regarding the outcome <code>hf_score</code> with the additional exposure of <code>pf_expression_control</code> as the slope decreases and the <span class="math inline">\(R^2\)</span> values indicate that the variance explained by the model does not increase as much as expected when combining the variables.</p>
 <ol start="11" style="list-style-type: decimal">
 <li></li>
 </ol>
@@ -1188,19 +1223,18 @@ lm(formula = pf_expression_control ~ ef_money, data = hfi)
 
 Residuals:
     Min      1Q  Median      3Q     Max 
--5.4307 -1.4383  0.0757  1.5433  5.0585 
+-4.9646 -1.4800 -0.0326  1.8818  4.5114 
 
 Coefficients:
             Estimate Std. Error t value Pr(&gt;|t|)    
-(Intercept) -0.54735    0.32227  -1.698   0.0897 .  
-ef_money     0.71542    0.03911  18.291   &lt;2e-16 ***
+(Intercept)  -0.1945     1.0179  -0.191    0.849    
+ef_money      0.6283     0.1218   5.160 7.22e-07 ***
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 
-Residual standard error: 1.995 on 1374 degrees of freedom
-  (82 observations deleted due to missingness)
-Multiple R-squared:  0.1958,    Adjusted R-squared:  0.1952 
-F-statistic: 334.6 on 1 and 1374 DF,  p-value: &lt; 2.2e-16</code></pre>
+Residual standard error: 2.159 on 160 degrees of freedom
+Multiple R-squared:  0.1427,    Adjusted R-squared:  0.1373 
+F-statistic: 26.63 on 1 and 160 DF,  p-value: 7.223e-07</code></pre>
 <pre class="r"><code>ggscatter(hfi, x = &quot;ef_money&quot;, y = &quot;pf_expression_control&quot;, add = &quot;reg.line&quot;) +
   stat_cor(aes(label = paste(..rr.label.., ..p.label.., sep = &quot;~`,`~&quot;)))</code></pre>
 <pre><code>`geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
